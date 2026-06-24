@@ -1,82 +1,228 @@
-Bank Customer Churn Prediction using Artificial Neural Networks (ANN)
-Overview
+# 🏦 Bank Customer Churn Prediction using Artificial Neural Networks (ANN)
 
-This project predicts whether a bank customer is likely to leave the bank (churn) using an Artificial Neural Network (ANN). The model is trained on customer demographic and banking information such as age, balance, geography, gender, credit score, and tenure.
+## 📌 Project Overview
 
-Features
-Data preprocessing using Scikit-Learn
-Label Encoding and One-Hot Encoding
-Feature Scaling
-ANN model built with TensorFlow/Keras
-Hyperparameter tuning experiments
-Model persistence using Pickle and H5 files
-Interactive prediction interface using Streamlit/Flask
-Dataset
+Customer churn is one of the most critical challenges faced by banks and financial institutions. Losing existing customers directly impacts revenue and customer acquisition costs.
 
-The project uses the Bank Customer Churn Dataset containing:
+This project uses an Artificial Neural Network (ANN) built with TensorFlow/Keras to predict whether a customer is likely to leave the bank based on demographic and financial attributes.
 
-Credit Score
-Geography
-Gender
-Age
-Tenure
-Balance
-Number of Products
-Has Credit Card
-Is Active Member
-Estimated Salary
+The solution includes a complete machine learning pipeline, from data preprocessing and feature engineering to model deployment through an interactive web application.
 
-Target Variable:
+---
 
-Exited (1 = Customer Churned, 0 = Customer Retained)
-Tech Stack
-Python
-TensorFlow / Keras
-Scikit-Learn
-Pandas
-NumPy
-Streamlit / Flask
-Pickle
-Model Architecture
+## 🎯 Problem Statement
 
+The objective of this project is to predict customer churn using customer information such as:
+
+* Credit Score
+* Geography
+* Gender
+* Age
+* Tenure
+* Account Balance
+* Number of Products
+* Credit Card Ownership
+* Active Membership Status
+* Estimated Salary
+
+The model predicts:
+
+* **0 → Customer Retained**
+* **1 → Customer Churned**
+
+---
+
+## 🚀 Features
+
+✅ Data Cleaning and Preprocessing
+
+✅ Feature Encoding
+
+✅ Feature Scaling
+
+✅ Artificial Neural Network (ANN)
+
+✅ Model Saving and Loading
+
+✅ Real-Time Customer Churn Prediction
+
+✅ Interactive Streamlit Web Application
+
+---
+
+## 🛠️ Tech Stack
+
+### Programming Language
+
+* Python
+
+### Machine Learning & Deep Learning
+
+* TensorFlow
+* Keras
+* Scikit-Learn
+
+### Data Processing
+
+* Pandas
+* NumPy
+
+### Visualization
+
+* Matplotlib
+* Seaborn
+
+### Deployment
+
+* Streamlit
+
+---
+
+## 📂 Project Structure
+
+```text
+├── Churn_Modelling.csv
+├── experiments.ipynb
+├── prediction.ipynb
+├── app.py
+├── model.h5
+├── preprocessor.pkl
+├── label_encoder_gender.pkl
+├── onehot_encoder_geo.pkl
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## ⚙️ Machine Learning Pipeline
+
+### 1. Data Collection
+
+Customer data is loaded from the Churn Modelling dataset.
+
+### 2. Data Preprocessing
+
+* Handling categorical variables
+* Label Encoding (Gender)
+* One-Hot Encoding (Geography)
+* Feature Scaling using StandardScaler
+
+### 3. Train-Test Split
+
+Dataset is divided into training and testing sets for evaluation.
+
+### 4. Model Development
+
+A Deep Learning model is built using TensorFlow/Keras.
+
+Architecture:
+
+```text
 Input Layer
-
-↓
-
-Hidden Layer 1 (ReLU)
-
-↓
-
-Hidden Layer 2 (ReLU)
-
-↓
-
+      ↓
+Dense Layer (ReLU)
+      ↓
+Dense Layer (ReLU)
+      ↓
 Output Layer (Sigmoid)
+```
 
-Project Workflow
-Data Collection
-Data Preprocessing
-Feature Engineering
-Train-Test Split
-Feature Scaling
-ANN Model Training
-Hyperparameter Tuning
-Model Evaluation
-Deployment
-Results
+### 5. Model Training
 
-The ANN model learns customer behavior patterns and predicts the probability of customer churn, helping banks identify at-risk customers and improve retention strategies.
+The ANN learns customer behavior patterns from historical data.
 
-Installation
-git clone <repository-url>
-cd ANN
+### 6. Model Evaluation
 
+Performance is evaluated using classification metrics and validation data.
+
+### 7. Deployment
+
+The trained model is deployed through a Streamlit application for real-time predictions.
+
+---
+
+## 📊 Input Features
+
+| Feature         | Description             |
+| --------------- | ----------------------- |
+| CreditScore     | Customer credit score   |
+| Geography       | Customer country        |
+| Gender          | Male/Female             |
+| Age             | Customer age            |
+| Tenure          | Years with bank         |
+| Balance         | Account balance         |
+| NumOfProducts   | Number of products used |
+| HasCrCard       | Credit card ownership   |
+| IsActiveMember  | Activity status         |
+| EstimatedSalary | Customer salary         |
+
+---
+
+## 🎯 Prediction Output
+
+The application predicts:
+
+```text
+Customer is likely to churn
+```
+
+or
+
+```text
+Customer is likely to stay
+```
+
+along with the churn probability score.
+
+---
+
+## 📈 Business Impact
+
+Banks can use this model to:
+
+* Identify high-risk customers
+* Improve retention strategies
+* Reduce customer acquisition costs
+* Increase customer lifetime value
+* Improve targeted marketing campaigns
+
+---
+
+## ▶️ Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/customer-churn-ann.git
+cd customer-churn-ann
+```
+
+Install dependencies:
+
+```bash
 pip install -r requirements.txt
-Run Application
+```
+
+---
+
+## ▶️ Run the Application
+
+```bash
 streamlit run app.py
-Future Improvements
-XGBoost vs ANN comparison
-Explainable AI (SHAP)
-Customer segmentation
-Real-time prediction API using FastAPI
-Docker deployment
+```
+
+---
+
+## 🔮 Future Improvements
+
+* Hyperparameter Tuning
+* Explainable AI using SHAP
+* Model Comparison (Logistic Regression, Random Forest, XGBoost)
+* FastAPI Deployment
+* Docker Containerization
+* Cloud Deployment (AWS/GCP/Azure)
+
+---
+
+
